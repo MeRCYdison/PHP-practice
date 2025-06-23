@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>更新内容</title>
+  <link rel="stylesheet" href="update.css">
+  <script defer src="update.js"></script>
+</head>
+<body>
+<header>
+  <nav>
+    <ul>
+      <li><a href="./index.php">返回首页</a></li>
+    </ul>
+  </nav>
+</header>
+<div class="container">
+  <section id="manage-carousel">
+    <h2>轮播图管理</h2>
+    <div id="carousel-preview"></div>
+    <p>轮播图最多3张图片</p> <!-- 添加说明 -->
+    <form id="upload-carousel-form">
+      <label for="carousel-upload">上传新图片:</label>
+      <input type="file" id="carousel-upload" accept="image/*">
+      <button type="submit">上传</button>
+    </form>
+    <form id="delete-carousel-form">
+      <label for="carousel-delete-id">删除图片 (输入图片序号1-3):</label>
+      <input type="number" id="carousel-delete-id" min="1">
+      <button type="submit">删除</button>
+    </form>
+  </section>
+
+  <section id="manage-news">
+    <h2>新闻管理</h2>
+    <div id="news-preview"></div>
+    <p>新闻最多4条</p> <!-- 添加说明 -->
+    <form id="upload-news-form">
+      <label for="news-title">标题:</label>
+      <input type="text" id="news-title" required>
+      <label for="news-description">描述:</label>
+      <textarea id="news-description" required></textarea>
+      <label for="news-image">上传图片:</label>
+      <input type="file" id="news-image" accept="image/*">
+      <button type="submit">添加新闻</button>
+    </form>
+    <form id="delete-news-form">
+      <label for="news-delete-id">删除新闻 (输入新闻序号1-4):</label>
+      <input type="number" id="news-delete-id" min="1">
+      <button type="submit">删除</button>
+    </form>
+    <form id="update-news-form">
+      <label for="news-update-id">更新新闻 (输入新闻序号1-4):</label>
+      <input type="number" id="news-update-id" min="1" required>
+      <label for="update-news-title">新标题:</label>
+      <input type="text" id="update-news-title">
+      <label for="update-news-description">新描述:</label>
+      <textarea id="update-news-description"></textarea>
+      <label for="update-news-image">新图片:</label>
+      <input type="file" id="update-news-image" accept="image/*">
+      <button type="submit">更新</button>
+    </form>
+  </section>
+</div>
+</body>
+</html>

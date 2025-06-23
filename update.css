@@ -1,0 +1,192 @@
+/* update.css */
+
+/* 基础设置 */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+    padding-top: 80px; /* 给固定导航栏留出空间 */
+}
+
+/* 导航栏设置 */
+header {
+    position: fixed; /* 固定在视口顶部 */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* 保证在最前层 */
+    background-color: #4A4A4A;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 阴影效果提升层次 */
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 0;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* 容器布局 */
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 标题样式 */
+h2 {
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #4A4A4A;
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+/* 表单样式 */
+form {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #4A4A4A;
+}
+
+form input, form textarea, form button {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form textarea {
+    resize: vertical;
+    height: 80px;
+}
+
+form button {
+    background-color: #4A90E2;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #357ABD;
+}
+
+/* 轮播图预览 */
+#carousel-preview img {
+    width: 100px;
+    height: auto;
+    margin: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 新闻预览样式 */
+#news-preview {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#news-preview h2 {
+    font-family: 'Noto Serif SC', serif;
+    color: #4A4A4A;
+    margin-bottom: 20px;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2列布局 */
+    grid-gap: 20px; /* 网格间隙 */
+}
+
+.news-item {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ccc; /* 灰色边框 */
+    border-radius: 8px;
+    display: flex;
+    gap: 10px; /* 图像与文本的间距 */
+    align-items: flex-start;
+}
+
+.news-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.news-item h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.news-item p {
+    font-size: 1rem;
+    color: #666;
+    margin: 0;
+    line-height: 1.4;
+}
+
+
+/* 响应式设计 */
+@media screen and (max-width: 768px) {
+    body {
+        padding-top: 60px; /* 缩小顶部导航栏的空间 */
+    }
+
+    header nav ul {
+        flex-direction: column; /* 导航栏改为纵向排列 */
+        gap: 10px;
+    }
+
+    form input, form textarea, form button {
+        font-size: 0.9rem;
+    }
+
+    #news-preview .news-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
